@@ -12,8 +12,6 @@ const server = express()
 server.use( bodyparser.urlencoded( { extended : false } ) )
 server.use( bodyparser.json() )
 
-
-
 // ✔ [ git push post update ]
 server.post('/git' , (req, res, next) => {
   const payload  = JSON.stringify(req.body)
@@ -31,9 +29,6 @@ server.post('/git' , (req, res, next) => {
     return res.status(200).send('Unsuported Github event. Nothing done.')
   }
 } )
-
-// ☐ [ test ]
-server.get('/',(req,res)=>{res.send('hello world!')})
 
 // ✔ [ listen server at the port ]
 const PORT = process.env.PORT || 5000

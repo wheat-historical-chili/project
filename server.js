@@ -32,7 +32,8 @@ server.post('/git' , (req, res, next) => {
   }
 } )
 
-// ☐ [P ]
+// ☐ [ test ]
+server.get('/',(req,res)=>{res.send('hello world!')})
 
 // ✔ [ listen server at the port ]
 const PORT = process.env.PORT || 5000
